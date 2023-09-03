@@ -4,9 +4,13 @@
 
 package com.oi.luminex;
 
-import javax.swing.*;
-import java.awt.event.*;
-import com.oi.luminex.pages.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+import com.oi.luminex.pages.WelcomePage;
 
 /**
  *
@@ -19,10 +23,19 @@ public class Luminex extends JFrame {
   JPanel cur_page = null;
 
   public static void main(String[] args) {
-    Luminex lm = new Luminex();
+    Luminex app = new Luminex();
+    JPanel wp = new WelcomePage(app);
+    app.load_page(wp);
   }
 
   public Luminex() {
+    try {
+      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+        | UnsupportedLookAndFeelException ex) {
+      ex.printStackTrace();
+    }
+
     setSize(WINWIDTH, WINHEIGHT);
     setLayout(null);
     setResizable(false);
@@ -38,5 +51,7 @@ public class Luminex extends JFrame {
     jp.setBounds(0, 0, WINWIDTH, WINHEIGHT);
     add(jp);
     cur_page = jp;
+    revalidate();
+    repaint();
   }
 }
