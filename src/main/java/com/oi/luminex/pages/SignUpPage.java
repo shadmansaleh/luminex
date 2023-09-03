@@ -1,58 +1,84 @@
 package com.oi.luminex.pages;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Font;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.plaf.FontUIResource;
 
 import com.oi.luminex.Luminex;
+import com.oi.luminex.utils.Cl;
 
-public class SignUpPage extends JPanel implements ActionListener {
+public class SignUpPage extends JPanel {
 
-  JButton signup, signin;
   Luminex parent;
-  Image bgimg;
 
   public SignUpPage(Luminex jf) {
     parent = jf;
     setLayout(null);
 
-    Color cyan1 = new Color(0x0097b2);
-    Color cyan2 = new Color(0x7ac9d6);
+    SideBarBasic sb = new SideBarBasic();
+    SignUpPane sip = new SignUpPane();
 
-    setBackground(cyan1);
+    add(sb);
+    add(sip);
+  }
+}
 
-    signin = new JButton("Sign In");
-    // signup = new JButton("Sign Up");
+class SignUpPane extends JPanel {
+  JLabel lb_un, lb_ps, lb_ln;
+  JTextField tf_un;
+  JPasswordField pf_ps;
+  JButton signin;
 
-    signin.setBounds(290, 500, 200, 100);
-    // signup.setBounds(790, 500, 200, 100);
+  public SignUpPane() {
+    setLayout(null);
+    setBackground(Cl.darkgray1);
+    setBounds(300, 0, 980, 800);
+
+    lb_ln = new JLabel("Create Account");
+    lb_ln.setFont(new FontUIResource("Dialog", Font.ITALIC, 28));
+    lb_ln.setForeground(Cl.cyan1);
+    lb_ln.setBounds(400, 100, 250, 50);
     //
-    signin.setContentAreaFilled(false);
-    signin.setForeground(cyan2);
-    // signup.setContentAreaFilled(false);
-    // signup.setForeground(cyan2);
+    // lb_un = new JLabel("Username");
+    // lb_un.setFont(new FontUIResource("Dialog", Font.PLAIN, 18));
+    // lb_un.setForeground(Cl.cyan1);
+    // lb_un.setBounds(300, 300, 200, 30);
+    //
+    // lb_ps = new JLabel("Password");
+    // lb_ps.setFont(new FontUIResource("Dialog", Font.PLAIN, 18));
+    // lb_ps.setForeground(Cl.cyan1);
+    // lb_ps.setBounds(300, 350, 200, 30);
+    //
+    // tf_un = new JTextField(50);
+    // tf_un.setBounds(430, 300, 300, 30);
+    // pf_ps = new JPasswordField(50);
+    // pf_ps.setBounds(430, 350, 300, 30);
 
+    signin = new JButton("Sign Up");
+    signin.setBounds(450, 600, 100, 50);
+    signin.setBackground(Cl.cyan1);
+    signin.setForeground(Cl.darkgray1);
+    signin.addActionListener(ae -> {
+      // handle_signup(tf_un.getText(), new String(pf_ps.getPassword()));
+    });
+
+    add(lb_ln);
+    // add(lb_un);
+    // add(tf_un);
+    // add(lb_ps);
+    // add(pf_ps);
     add(signin);
-    // add(signup);
-
-    bgimg = new ImageIcon(this.getClass().getResource("/res/images/icon/icon_500x312.jpeg")).getImage();
   }
 
-  @Override
-  protected void paintComponent(Graphics g) {
-    super.paintComponent(g);
-    g.drawImage(bgimg, 400, 0, null);
+  // Todo: implement user varification
+  boolean handle_signup(String uname, String rawpass) {
+    return true;
+    
   }
-
-  @Override
-  public void actionPerformed(ActionEvent ae) {
-  }
-  
 }
 
