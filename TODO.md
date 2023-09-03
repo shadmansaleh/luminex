@@ -3,7 +3,7 @@
 - [ ] finalize project idea
 - [ ] figure out java and java swing
 - [ ] design the app
-- [ ] go forword with implementation
+- [ ] go forward with implementation
 
 ### Ideas
 
@@ -11,8 +11,8 @@
 
 Purpose:
 =======
-build a platform whrere both professional and enthusiasts can interect,
-share knowledge about astronomy togather.
+build a platform where both professionals and enthusiasts can interact,
+share knowledge about astronomy [-,-] together.
 
 things that can be implemented:
 =======
@@ -28,19 +28,19 @@ things that can be implemented:
   - allow users to make suggestions on info
   - allow users to request new addition with their info
   - allow other credible users to approve changes
-- articles about differnent astronomical objects and phenomena
+- articles about different astronomical objects and phenomena
   - allow users to rate these
   - allow user to leave comments
 - friend or follow system?
 - favorites or bookmark
 - Travia or Quizes for general users
 - user profile
-  - progress tracker (for quizes, differnent contribution level?)
+  - progress tracker (for quizes, different contribution level?)
   - leaderboard
     - based on quzies & contributions
-- section with image gallary
+- section with image gallery
 - app configuration
   - measurement units
   - language
   - light/dark themeing?
-- Astronomical even callender
+- Astronomical even Callender
