@@ -1,12 +1,14 @@
 package com.oi.luminex.pages;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.plaf.FontUIResource;
 
 import com.oi.luminex.Luminex;
 
@@ -36,6 +38,9 @@ public class WelcomePage extends JPanel {
     signin.setForeground(cyan2);
     signup.setContentAreaFilled(false);
     signup.setForeground(cyan2);
+
+    signin.setFont(new FontUIResource("Dialog", Font.PLAIN, 24));
+    signup.setFont(new FontUIResource("Dialog", Font.PLAIN, 24));
 
     signin.addActionListener(ae -> {
       JPanel sp = new SignInPage(app);
