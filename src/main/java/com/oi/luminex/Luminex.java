@@ -12,6 +12,6 @@ package com.oi.luminex;
 public class Luminex {
 
     public static void main(String[] args) {
-
+        System.out.println("hell");
     }
 }
