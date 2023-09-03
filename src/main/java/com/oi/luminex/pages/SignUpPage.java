@@ -41,7 +41,7 @@ public class SignUpPage extends JPanel implements ActionListener {
     add(signin);
     // add(signup);
 
-    bgimg = new ImageIcon("res/images/icon/icon_500x312.jpeg").getImage();
+    bgimg = new ImageIcon(this.getClass().getResource("/res/images/icon/icon_500x312.jpeg")).getImage();
   }
 
   @Override

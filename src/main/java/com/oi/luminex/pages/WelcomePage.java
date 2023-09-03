@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.plaf.FontUIResource;
 
 import com.oi.luminex.Luminex;
+import com.oi.luminex.utils.Cl;
 
 
 public class WelcomePage extends JPanel {
@@ -23,10 +24,7 @@ public class WelcomePage extends JPanel {
     app = jf;
     setLayout(null);
 
-    Color cyan1 = new Color(0x0097b2);
-    Color cyan2 = new Color(0x7ac9d6);
-
-    setBackground(cyan1);
+    setBackground(Cl.cyan1);
 
     signin = new JButton("Sign In");
     signup = new JButton("Sign Up");
@@ -35,9 +33,9 @@ public class WelcomePage extends JPanel {
     signup.setBounds(790, 500, 200, 100);
 
     signin.setContentAreaFilled(false);
-    signin.setForeground(cyan2);
+    signin.setForeground(Cl.cyan2);
     signup.setContentAreaFilled(false);
-    signup.setForeground(cyan2);
+    signup.setForeground(Cl.cyan2);
 
     signin.setFont(new FontUIResource("Dialog", Font.PLAIN, 24));
     signup.setFont(new FontUIResource("Dialog", Font.PLAIN, 24));
@@ -54,7 +52,7 @@ public class WelcomePage extends JPanel {
     add(signin);
     add(signup);
 
-    bgimg = new ImageIcon("res/images/icon/icon_500x312.jpeg").getImage();
+    bgimg = new ImageIcon(this.getClass().getResource("/res/images/icon/icon_500x312.jpeg")).getImage();
   }
 
   @Override

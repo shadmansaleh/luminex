@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import com.oi.luminex.pages.SignInPage;
 import com.oi.luminex.pages.WelcomePage;
 
 /**
@@ -40,7 +41,7 @@ public class Luminex extends JFrame {
     setLayout(null);
     setResizable(false);
     setTitle("Luminex");
-    ImageIcon icon = new ImageIcon("res/images/icon/icon.jpeg");
+    ImageIcon icon = new ImageIcon(this.getClass().getResource("/res/images/icon/icon.jpeg"));
     setIconImage(icon.getImage());
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setVisible(true);
