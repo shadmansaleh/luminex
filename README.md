@@ -1,4 +1,4 @@
-### Luminix
+### Luminex
 
 30I is still wondering what it is
 
