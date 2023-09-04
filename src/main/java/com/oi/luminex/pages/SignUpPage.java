@@ -1,7 +1,10 @@
 package com.oi.luminex.pages;
 
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
@@ -16,6 +19,19 @@ import com.oi.luminex.Luminex;
 import com.oi.luminex.utils.Cl;
 import com.oi.luminex.pages.SignUpPanel;
 
+class CustomSignUpPanel extends SignUpPanel {
+  Image bgimage;
+  public CustomSignUpPanel() {
+    super();
+    bgimage = new ImageIcon(this.getClass().getResource("/res/images/background/planets.jpg")).getImage();
+  }
+  @Override
+  protected void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    g.drawImage(bgimage, 300, 0, null);
+  }
+}
+
 public class SignUpPage extends JPanel {
 
   Luminex parent;
@@ -25,7 +41,7 @@ public class SignUpPage extends JPanel {
     setLayout(null);
 
     SideBarBasic sb = new SideBarBasic(jf);
-    SignUpPanel sign_up_panel = new SignUpPanel();
+    CustomSignUpPanel sign_up_panel = new CustomSignUpPanel();
     sign_up_panel.setBounds(300,0, 980, 800);
 
     add(sb);
