@@ -33,9 +33,9 @@ public class WelcomePage extends JPanel {
     signup.setBounds(790, 500, 200, 100);
 
     signin.setContentAreaFilled(false);
-    signin.setForeground(Cl.cyan2);
+    signin.setForeground(Cl.orange1);
     signup.setContentAreaFilled(false);
-    signup.setForeground(Cl.cyan2);
+    signup.setForeground(Cl.orange1);
 
     signin.setFont(new FontUIResource("Dialog", Font.PLAIN, 24));
     signup.setFont(new FontUIResource("Dialog", Font.PLAIN, 24));
