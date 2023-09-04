@@ -54,6 +54,7 @@ public class SignUpPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(204, 220, 220));
 
+        jLabel1.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 151, 178));
         jLabel1.setText("Create Account");
 
@@ -70,7 +71,7 @@ public class SignUpPanel extends javax.swing.JPanel {
         jLabel3.setText("Last Name");
 
         jLabel4.setForeground(new java.awt.Color(0, 151, 178));
-        jLabel4.setText("UserName");
+        jLabel4.setText("Username");
 
         jLabel5.setForeground(new java.awt.Color(0, 151, 178));
         jLabel5.setText("Password");

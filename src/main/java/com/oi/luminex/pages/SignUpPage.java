@@ -24,7 +24,7 @@ public class SignUpPage extends JPanel {
     parent = jf;
     setLayout(null);
 
-    SideBarBasic sb = new SideBarBasic();
+    SideBarBasic sb = new SideBarBasic(jf);
     SignUpPanel sign_up_panel = new SignUpPanel();
     sign_up_panel.setBounds(300,0, 980, 800);
 

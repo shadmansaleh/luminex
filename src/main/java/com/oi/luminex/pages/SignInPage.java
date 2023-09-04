@@ -20,7 +20,7 @@ public class SignInPage extends JPanel {
     parent = jf;
     setLayout(null);
 
-    SideBarBasic sb = new SideBarBasic();
+    SideBarBasic sb = new SideBarBasic(jf);
     SignInPane sip = new SignInPane();
 
     add(sb);
