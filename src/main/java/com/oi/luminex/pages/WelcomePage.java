@@ -18,7 +18,7 @@ public class WelcomePage extends JPanel {
 
   JButton signup, signin;
   Luminex app;
-  Image bgimg;
+  Image icon, bgimage;
 
   public WelcomePage(Luminex jf) {
     app = jf;
@@ -52,12 +52,14 @@ public class WelcomePage extends JPanel {
     add(signin);
     add(signup);
 
-    bgimg = new ImageIcon(this.getClass().getResource("/res/images/icon/icon_500x312.jpeg")).getImage();
+    icon = new ImageIcon(this.getClass().getResource("/res/images/icon/icon_transparent.png")).getImage();
+    bgimage = new ImageIcon(this.getClass().getResource("/res/images/background/solar-syste.jpg")).getImage();
   }
 
   @Override
   protected void paintComponent(Graphics g) {
     super.paintComponent(g);
-    g.drawImage(bgimg, 400, 0, null);
+    g.drawImage(bgimage, 0, 0, null);
+    g.drawImage(icon, 500, 0, null);
   }
 }

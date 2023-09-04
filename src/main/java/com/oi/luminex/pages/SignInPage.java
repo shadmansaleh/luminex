@@ -1,7 +1,10 @@
 package com.oi.luminex.pages;
 
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -33,11 +36,14 @@ class SignInPane extends JPanel {
   JTextField tf_un;
   JPasswordField pf_ps;
   JButton signin;
+  Image bgimage;
 
   public SignInPane() {
     setLayout(null);
     setBackground(Cl.darkgray1);
     setBounds(300, 0, 980, 800);
+
+    bgimage = new ImageIcon(this.getClass().getResource("/res/images/background/planets.jpg")).getImage();
 
     lb_ln = new JLabel("Login");
     lb_ln.setFont(new FontUIResource("Dialog", Font.ITALIC, 32));
@@ -73,6 +79,12 @@ class SignInPane extends JPanel {
     add(lb_ps);
     add(pf_ps);
     add(signin);
+  }
+
+  @Override
+  protected void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    g.drawImage(bgimage, 0, 0, null);
   }
 
   // Todo: implement user varification

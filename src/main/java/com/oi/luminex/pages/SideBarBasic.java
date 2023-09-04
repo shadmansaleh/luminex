@@ -1,5 +1,6 @@
 package com.oi.luminex.pages;
 
+import java.awt.Graphics;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -24,6 +25,7 @@ public class SideBarBasic extends JPanel {
 
 
     back = new JButton(new ImageIcon(this.getClass().getResource("/res/images/icon/back_icon.png")));
+    back.setBorder(null);
     back.setContentAreaFilled(false);
     back.setBounds(0, 0, 50, 50);
     back.addActionListener(ae -> {
@@ -32,10 +34,17 @@ public class SideBarBasic extends JPanel {
     });
 
     JLabel logo = new JLabel(new ImageIcon(this.getClass().getResource("/res/images/icon/icon_transparent_200x100.png")));
+    bgimg = new ImageIcon(this.getClass().getResource("/res/images/background/astronaut.jpg")).getImage();
 
-    logo.setBounds(50, 300, 200, 100);
+    logo.setBounds(50, 50, 200, 100);
     add(back);
     add(logo);
+  }
+
+  @Override
+  protected void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    g.drawImage(bgimg, 0, 0,  null);
   }
 }
 
