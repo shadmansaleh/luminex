@@ -43,7 +43,7 @@ class SignInPane extends JPanel {
     setBackground(Cl.darkgray1);
     setBounds(300, 0, 980, 800);
 
-    bgimage = new ImageIcon(this.getClass().getResource("/res/images/background/planets.jpg")).getImage();
+    bgimage = new ImageIcon(this.getClass().getResource("/images/background/planets.jpg")).getImage();
 
     lb_ln = new JLabel("Login");
     lb_ln.setFont(new FontUIResource("Dialog", Font.ITALIC, 32));

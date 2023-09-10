@@ -24,7 +24,7 @@ public class SideBarBasic extends JPanel {
     setBounds(0, 0, 300, 800);
 
 
-    back = new JButton(new ImageIcon(this.getClass().getResource("/res/images/icon/back_icon.png")));
+    back = new JButton(new ImageIcon(this.getClass().getResource("/images/icon/back_icon.png")));
     back.setBorder(null);
     back.setContentAreaFilled(false);
     back.setBounds(0, 0, 50, 50);
@@ -33,8 +33,8 @@ public class SideBarBasic extends JPanel {
       app.load_page(wp);
     });
 
-    JLabel logo = new JLabel(new ImageIcon(this.getClass().getResource("/res/images/icon/icon_transparent_200x100.png")));
-    bgimg = new ImageIcon(this.getClass().getResource("/res/images/background/astronaut.jpg")).getImage();
+    JLabel logo = new JLabel(new ImageIcon(this.getClass().getResource("/images/icon/icon_transparent_200x100.png")));
+    bgimg = new ImageIcon(this.getClass().getResource("/images/background/astronaut.jpg")).getImage();
 
     logo.setBounds(50, 50, 200, 100);
     add(back);

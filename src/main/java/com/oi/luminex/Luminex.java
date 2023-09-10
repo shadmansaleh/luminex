@@ -41,7 +41,7 @@ public class Luminex extends JFrame {
     setLayout(null);
     setResizable(false);
     setTitle("Luminex");
-    ImageIcon icon = new ImageIcon(this.getClass().getResource("/res/images/icon/icon.jpeg"));
+    ImageIcon icon = new ImageIcon(this.getClass().getResource("/images/icon/icon.jpeg"));
     setIconImage(icon.getImage());
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setVisible(true);

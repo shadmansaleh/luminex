@@ -52,8 +52,8 @@ public class WelcomePage extends JPanel {
     add(signin);
     add(signup);
 
-    icon = new ImageIcon(this.getClass().getResource("/res/images/icon/icon_transparent.png")).getImage();
-    bgimage = new ImageIcon(this.getClass().getResource("/res/images/background/solar-syste.jpg")).getImage();
+    icon = new ImageIcon(this.getClass().getResource("/images/icon/icon_transparent.png")).getImage();
+    bgimage = new ImageIcon(this.getClass().getResource("/images/background/solar-syste.jpg")).getImage();
   }
 
   @Override

@@ -23,7 +23,7 @@ class CustomSignUpPanel extends SignUpPanel {
   Image bgimage;
   public CustomSignUpPanel() {
     super();
-    bgimage = new ImageIcon(this.getClass().getResource("/res/images/background/planets.jpg")).getImage();
+    bgimage = new ImageIcon(this.getClass().getResource("/images/background/planets.jpg")).getImage();
   }
   @Override
   protected void paintComponent(Graphics g) {
