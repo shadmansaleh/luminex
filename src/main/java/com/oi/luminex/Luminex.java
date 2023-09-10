@@ -12,6 +12,8 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import com.oi.luminex.pages.SignInPage;
 import com.oi.luminex.pages.WelcomePage;
+import com.oi.luminex.pages.WelcomeFrame;
+import com.oi.luminex.Luminex2
 
 /**
  *
@@ -24,9 +26,11 @@ public class Luminex extends JFrame {
   JPanel cur_page = null;
 
   public static void main(String[] args) {
-    Luminex app = new Luminex();
-    JPanel wp = new WelcomePage(app);
-    app.load_page(wp);
+//    Luminex2 app = new Luminex2();
+    new WelcomeFrame();
+//    JPanel wp = new WelcomePage(app);
+//    app.load_page(wp);
+      
   }
 
   public Luminex() {
