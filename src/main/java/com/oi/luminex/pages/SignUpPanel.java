@@ -4,6 +4,7 @@
  */
 package com.oi.luminex.pages;
 import com.oi.luminex.utils.Cl;
+import java.awt.Color;
 
 /**
  *
@@ -14,6 +15,7 @@ public class SignUpPanel extends javax.swing.JPanel {
     /**
      * Creates new form SignUpPanel
      */
+    Color fg = Cl.cyan1
     public SignUpPanel() {
         initComponents();
     }
@@ -248,15 +250,19 @@ public class SignUpPanel extends javax.swing.JPanel {
         jToggleButton1.setBorder(null);
         jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 578, -1, -1));
 
+        jLabel13.setForeground(fg);
         jLabel13.setText("Newbie");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(346, 482, -1, -1));
 
+        jLabel14.setForeground(fg);
         jLabel14.setText("Hobiest");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 482, -1, -1));
 
+        jLabel15.setForeground(fg);
         jLabel15.setText("Expart");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(609, 482, -1, -1));
 
+        jLabel17.setForeground(fg);
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background/planets.jpg"))); // NOI18N
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 820));
 

@@ -14,6 +14,7 @@ import javax.swing.plaf.FontUIResource;
 
 import com.oi.luminex.Luminex;
 import com.oi.luminex.utils.Cl;
+import com.oi.luminex.pages.DashBoard;
 
 public class SignInPage extends JPanel {
 
@@ -24,7 +25,7 @@ public class SignInPage extends JPanel {
     setLayout(null);
 
     SideBarBasic sb = new SideBarBasic(jf);
-    SignInPane sip = new SignInPane();
+    SignInPane sip = new SignInPane(jf);
 
     add(sb);
     add(sip);
@@ -37,8 +38,10 @@ class SignInPane extends JPanel {
   JPasswordField pf_ps;
   JButton signin;
   Image bgimage;
+  Luminex parent;
 
-  public SignInPane() {
+  public SignInPane(Luminex jf) {
+    parent = jf;
     setLayout(null);
     setBackground(Cl.darkgray1);
     setBounds(300, 0, 980, 800);
@@ -70,7 +73,10 @@ class SignInPane extends JPanel {
     signin.setBackground(Cl.cyan1);
     signin.setForeground(Cl.darkgray1);
     signin.addActionListener(ae -> {
-      handle_login(tf_un.getText(), new String(pf_ps.getPassword()));
+      if (handle_login(tf_un.getText(), new String(pf_ps.getPassword()))) {
+          DashBoard ds = new DashBoard();
+          parent.load_page(ds);
+      }
     });
 
     add(lb_ln);

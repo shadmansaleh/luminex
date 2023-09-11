@@ -3,13 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.oi.luminex.pages;
-
+import com.oi.luminex.utils.Cl;
+import java.awt.Color;
 /**
  *
  * @author shadman
  */
 public class DashBoard extends javax.swing.JPanel {
-
+    Color fg = Cl.cyan1;
+    
     /**
      * Creates new form DashBoard
      */
@@ -26,29 +28,286 @@ public class DashBoard extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        topbar = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        sidebar = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        wiki1 = new com.oi.luminex.pages.wiki.wiki();
+        serachicon = new javax.swing.JLabel();
+        serach_field = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        name = new javax.swing.JLabel();
+        mass = new javax.swing.JLabel();
+        diameter = new javax.swing.JLabel();
+        mass_value = new javax.swing.JLabel();
+        dim_value = new javax.swing.JLabel();
+        distance = new javax.swing.JLabel();
+        distance_value = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jPanel2 = new javax.swing.JPanel();
+        name1 = new javax.swing.JLabel();
+        mass1 = new javax.swing.JLabel();
+        diameter1 = new javax.swing.JLabel();
+        mass_value1 = new javax.swing.JLabel();
+        dim_value1 = new javax.swing.JLabel();
+        distance1 = new javax.swing.JLabel();
+        distance_value1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
+        setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255, 0));
-        jPanel1.setOpaque(false);
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        topbar.setBackground(new java.awt.Color(204, 255, 255, 0));
+        topbar.setOpaque(false);
+        topbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("jButton1");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 120, 30));
+        jButton3.setBackground(new java.awt.Color(153, 153, 153));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon/profile-icon.png"))); // NOI18N
+        jButton3.setBorderPainted(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        topbar.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 10, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background/planet_nevbar_bg.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 200));
+        topbar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, 60));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        sidebar.setBackground(new java.awt.Color(102, 153, 255));
+        sidebar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton4.setBackground(new java.awt.Color(51, 255, 204));
+        jButton4.setForeground(fg);
+        jButton4.setText("Home");
+        jButton4.setBorder(null);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        sidebar.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 170, 40));
+
+        jButton1.setBackground(new java.awt.Color(97, 255, 250));
+        jButton1.setForeground(fg);
+        jButton1.setText("Wiki");
+        jButton1.setBorder(null);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        sidebar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 170, 40));
+
+        jButton2.setBackground(new java.awt.Color(51, 255, 204));
+        jButton2.setForeground(fg);
+        jButton2.setText("Articles");
+        jButton2.setBorder(null);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        sidebar.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 170, 40));
+
+        jButton5.setBackground(new java.awt.Color(51, 255, 204));
+        jButton5.setForeground(fg);
+        jButton5.setText("Quizes");
+        jButton5.setBorder(null);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        sidebar.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 170, 40));
+
+        jButton6.setBackground(new java.awt.Color(51, 255, 204));
+        jButton6.setForeground(fg);
+        jButton6.setText("LeaderBoard");
+        jButton6.setBorder(null);
+        sidebar.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 170, 40));
+
+        add(sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 200, 740));
+
+        wiki1.setBackground(new java.awt.Color(0, 204, 204));
+        wiki1.setPreferredSize(new java.awt.Dimension(1080, 740));
+        wiki1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        serachicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icon/search.png"))); // NOI18N
+        wiki1.add(serachicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, -1, -1));
+
+        serach_field.setBackground(new java.awt.Color(0, 204, 204));
+        serach_field.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        serach_field.setOpaque(true);
+        serach_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serach_fieldActionPerformed(evt);
+            }
+        });
+        wiki1.add(serach_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, 210, -1));
+
+        jPanel1.setBackground(new java.awt.Color(0, 255, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name.setFont(new java.awt.Font("Glass Antiqua", 2, 20)); // NOI18N
+        name.setForeground(new java.awt.Color(102, 102, 255));
+        name.setText("Earch");
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        mass.setFont(new java.awt.Font("Glass Antiqua", 1, 16)); // NOI18N
+        mass.setText("Mass");
+        jPanel1.add(mass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+
+        diameter.setFont(new java.awt.Font("Glass Antiqua", 1, 16)); // NOI18N
+        diameter.setText("Diameter");
+        jPanel1.add(diameter, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        mass_value.setFont(new java.awt.Font("Glass Antiqua", 0, 16)); // NOI18N
+        mass_value.setText("5.972168×10^24 kg");
+        jPanel1.add(mass_value, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
+
+        dim_value.setFont(new java.awt.Font("Glass Antiqua", 0, 16)); // NOI18N
+        dim_value.setText("12,742 km");
+        jPanel1.add(dim_value, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+
+        distance.setFont(new java.awt.Font("Glass Antiqua", 1, 16)); // NOI18N
+        distance.setText("Distance");
+        jPanel1.add(distance, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        distance_value.setFont(new java.awt.Font("Glass Antiqua", 0, 16)); // NOI18N
+        distance_value.setText("150 mil km ");
+        jPanel1.add(distance_value, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 255, 204));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Glass Antiqua", 2, 16)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Earth is the third planet from the Sun and the only astronomical object known to\nharbor life. This is enabled by Earth being a water world, the only one in the Solar System \nsustaining liquid surface water. Almost all of Earth's water is contained in its global ocean, \ncovering 70.8% of Earth's surface. The remaining 29.2% of Earth's surface is land,.");
+        jTextArea1.setBorder(null);
+        jTextArea1.setFocusable(false);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 560, -1));
+
+        wiki1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 1030, 170));
+
+        jPanel2.setBackground(new java.awt.Color(0, 255, 204));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        name1.setFont(new java.awt.Font("Glass Antiqua", 2, 20)); // NOI18N
+        name1.setForeground(new java.awt.Color(102, 102, 255));
+        name1.setText("Mars");
+        jPanel2.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 120, 30));
+
+        mass1.setFont(new java.awt.Font("Glass Antiqua", 1, 16)); // NOI18N
+        mass1.setText("Mass");
+        jPanel2.add(mass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+
+        diameter1.setFont(new java.awt.Font("Glass Antiqua", 1, 16)); // NOI18N
+        diameter1.setText("Diameter");
+        jPanel2.add(diameter1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        mass_value1.setFont(new java.awt.Font("Glass Antiqua", 0, 16)); // NOI18N
+        mass_value1.setText("6.4171×10^23 kg");
+        jPanel2.add(mass_value1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
+
+        dim_value1.setFont(new java.awt.Font("Glass Antiqua", 0, 16)); // NOI18N
+        dim_value1.setText("6779 km");
+        jPanel2.add(dim_value1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+
+        distance1.setFont(new java.awt.Font("Glass Antiqua", 1, 16)); // NOI18N
+        distance1.setText("Distance");
+        jPanel2.add(distance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        distance_value1.setFont(new java.awt.Font("Glass Antiqua", 0, 16)); // NOI18N
+        distance_value1.setText("230 mil km ");
+        jPanel2.add(distance_value1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setBackground(new java.awt.Color(0, 255, 204));
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Glass Antiqua", 2, 16)); // NOI18N
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Mars is the fourth planet and the furthest terrestrial planet from the Sun. The reddish color\nof its surface is due to finely grained iron(III) oxide dust in the soil, giving it the nickname\n\"the Red Planet\".Mars's radius is second smallest among the planets in the Solar System at\n3,389.5 km (2,106 mi)");
+        jTextArea2.setBorder(null);
+        jTextArea2.setCaretColor(new java.awt.Color(0, 204, 204));
+        jTextArea2.setFocusable(false);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 560, -1));
+
+        wiki1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 1030, 170));
+
+        add(wiki1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void serach_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serach_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_serach_fieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel diameter;
+    private javax.swing.JLabel diameter1;
+    private javax.swing.JLabel dim_value;
+    private javax.swing.JLabel dim_value1;
+    private javax.swing.JLabel distance;
+    private javax.swing.JLabel distance1;
+    private javax.swing.JLabel distance_value;
+    private javax.swing.JLabel distance_value1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JLabel mass;
+    private javax.swing.JLabel mass1;
+    private javax.swing.JLabel mass_value;
+    private javax.swing.JLabel mass_value1;
+    private javax.swing.JLabel name;
+    private javax.swing.JLabel name1;
+    private javax.swing.JTextField serach_field;
+    private javax.swing.JLabel serachicon;
+    private javax.swing.JPanel sidebar;
+    private javax.swing.JPanel topbar;
+    private com.oi.luminex.pages.wiki.wiki wiki1;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,7 @@
 
 package com.oi.luminex;
 
+import com.oi.luminex.pages.DashBoard;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -27,6 +28,9 @@ public class Luminex extends JFrame {
     Luminex app = new Luminex();
     JPanel wp = new WelcomePage(app);
     app.load_page(wp);
+
+//    DashBoard ds = new DashBoard();
+//    app.load_page(ds);
   }
 
   public Luminex() {
