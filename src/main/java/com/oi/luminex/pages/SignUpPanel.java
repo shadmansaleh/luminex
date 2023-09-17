@@ -15,7 +15,7 @@ public class SignUpPanel extends javax.swing.JPanel {
     /**
      * Creates new form SignUpPanel
      */
-    Color fg = Cl.cyan1
+    Color fg = Cl.cyan1;
     public SignUpPanel() {
         initComponents();
     }

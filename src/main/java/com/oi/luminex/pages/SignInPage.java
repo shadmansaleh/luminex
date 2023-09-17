@@ -74,8 +74,7 @@ class SignInPane extends JPanel {
     signin.setForeground(Cl.darkgray1);
     signin.addActionListener(ae -> {
       if (handle_login(tf_un.getText(), new String(pf_ps.getPassword()))) {
-          DashBoard ds = new DashBoard();
-          parent.load_page(ds);
+         
       }
     });
 
@@ -95,7 +94,13 @@ class SignInPane extends JPanel {
 
   // Todo: implement user varification
   boolean handle_login(String uname, String rawpass) {
-    return true;
-    
+    System.out.println(rawpass);
+    if ("password".equals(rawpass) && ("admin".equals(uname) || "user".equals(uname))) {
+        DashBoard ds = new DashBoard("admin".equals(uname));
+        parent.load_page(ds);
+        return true;
+    } else {
+        return true;
+    }
   }
 }

@@ -19,18 +19,6 @@ import com.oi.luminex.Luminex;
 import com.oi.luminex.utils.Cl;
 import com.oi.luminex.pages.SignUpPanel;
 
-class CustomSignUpPanel extends SignUpPanel {
-  Image bgimage;
-  public CustomSignUpPanel() {
-    super();
-    bgimage = new ImageIcon(this.getClass().getResource("/images/background/planets.jpg")).getImage();
-  }
-  @Override
-  protected void paintComponent(Graphics g) {
-    super.paintComponent(g);
-    g.drawImage(bgimage, 300, 0, null);
-  }
-}
 
 public class SignUpPage extends JPanel {
 
@@ -41,7 +29,7 @@ public class SignUpPage extends JPanel {
     setLayout(null);
 
     SideBarBasic sb = new SideBarBasic(jf);
-    CustomSignUpPanel sign_up_panel = new CustomSignUpPanel();
+    SignUpPanel sign_up_panel = new SignUpPanel();
     sign_up_panel.setBounds(300,0, 980, 800);
 
     add(sb);

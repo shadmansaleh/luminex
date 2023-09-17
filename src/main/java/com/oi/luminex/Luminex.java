@@ -29,8 +29,8 @@ public class Luminex extends JFrame {
     JPanel wp = new WelcomePage(app);
     app.load_page(wp);
 
-//    DashBoard ds = new DashBoard();
-//    app.load_page(ds);
+    DashBoard ds = new DashBoard(true);
+    app.load_page(ds);
   }
 
   public Luminex() {
